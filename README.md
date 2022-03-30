@@ -29,12 +29,6 @@ Có hai phương pháp phân tích phổ biến của thị trường chứng kh
 
 - **Phân tích kỹ thuật (Technical Analysis)**: Phân tích kỹ thuật bao gồm việc đọc các biểu đồ dữ liệu và sử dụng các số liệu thống kê để xác định các xu hướng trên thị trường chứng khoán.
 
-
-<img src='https://drive.google.com/uc?id=19o-Vyv4Gj1Nt1agTZeSZ7F6M4Ink5yBc
-' width="900"  height="450" align="center"/>
-
-(*Nguồn ảnh: exmarkets.com*)
-
 Trong đồ án này, Nhóm chủ yếu tập trung vào phân tích kỹ thuật , nơi giá cổ phiếu trong tương lai được dự đoán bằng cách phân tích dữ liệu quá khứ, tập trung vào việc nghiên cứu giá cả chứng khoán và khối lượng giao dịch. PTKT  thường được sử dụng trong các chiến thuật đầu tư trong ngắn hạn.
 
 - **Input:** Các số liệu thống kê được thu thập từ: các khảo sát, biểu đồ, đồ thị diễn biến giá cả và khối lượng giao dịch của cổ phiếu trong quá khứ.
