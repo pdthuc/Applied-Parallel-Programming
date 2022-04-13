@@ -12,7 +12,7 @@
 - Link github: https://github.com/pdthuc/Applied-Parallel-Programming
 
 ### KẾ HOẠCH THỰC HÀNH:
-- Link google sheets: 
+- Link google sheets: https://docs.google.com/spreadsheets/d/1ujRUfYyoGNbrof7VHU2Sj7fGFMxFfGlP1nINrSmHjgc/edit?usp=sharing
 
 ### LINK GOOGLE COLAB 
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1B78maMjn4Kj92OiXho6Zem89KnpvBc9k)
