@@ -18,21 +18,34 @@
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1B78maMjn4Kj92OiXho6Zem89KnpvBc9k)
 - Link: https://colab.research.google.com/drive/1B78maMjn4Kj92OiXho6Zem89KnpvBc9k
 
-### MÔ TẢ BÀI TOÁN
+### **1.1 MÔ TẢ TỔNG QUAN**
+**Tên đề tài:** 
+Image-Search-using-Parallel-Computing
+*(Công cụ Tìm kiếm Hình ảnh bằng kỹ thuật truy vấn truy xuất hình ảnh dựa trên nội dung liên quan )*
 
-**Tên đề tài:** Parallelizing-Machine-Learning-And-Statistical-Algorithms-For-Stock-Price-Prediction
+Với sự phát triển mạnh mẽ của internet, mọi người có thể tiếp cận với một lượng lớn thông tin. Do đó, việc truy xuất thông tin quan tâm trở nên rất khó khăn.
+Chẳng hạn như ảnh, video ở nhiều định dạng khác nhau như JPG, PNG, BMP và thậm chí cả GIF. 
 
-Phân tích thị trường chứng khoán (Stock market analysis)là công việc cần thiết đối với mọi nhà đầu tư (NĐT) chứng khoán, ở mọi thời điểm.
-  
-Có hai phương pháp phân tích phổ biến của thị trường chứng khoán:
-- **Phân tích cơ bản (Fundamental analysis)**: Phân tích cơ bản liên quan đến việc phân tích khả năng sinh lời trong tương lai của công ty trên cơ sở môi trường kinh doanh hiện tại và hiệu quả tài chính của công ty.
+-> Do đó cần có một công cụ tìm kiếm hình ảnh để tìm kiếm các hình ảnh liên quan và chính xác.
 
-- **Phân tích kỹ thuật (Technical Analysis)**: Phân tích kỹ thuật bao gồm việc đọc các biểu đồ dữ liệu và sử dụng các số liệu thống kê để xác định các xu hướng trên thị trường chứng khoán.
+Truy xuất hình ảnh dựa trên nội dung tìm kiếm các phương pháp để index, browse và truy vấn cơ sở dữ liệu hình ảnh lớn bằng cách sử dụng các phương pháp feature extraction và so sánh các feature.
 
-Trong đồ án này, Nhóm chủ yếu tập trung vào phân tích kỹ thuật , nơi giá cổ phiếu trong tương lai được dự đoán bằng cách phân tích dữ liệu quá khứ, tập trung vào việc nghiên cứu giá cả chứng khoán và khối lượng giao dịch. PTKT  thường được sử dụng trong các chiến thuật đầu tư trong ngắn hạn.
+- **Input:** Hình ảnh trong dataset.
+- **Output:** Những hình ảnh liên quan với ảnh input từ dataset.
 
-- **Input:** Các số liệu thống kê được thu thập từ: các khảo sát, biểu đồ, đồ thị diễn biến giá cả và khối lượng giao dịch của cổ phiếu trong quá khứ.
-- **Output:** Dự đoán giá từng loại cổ phiếu trong tương lai
+
+### **1.2 VẤN ĐỀ SONG SONG HÓA**
+
+Ứng dụng nảy có cần song song hóa hay không?
+
+**-> Có**
+
+ Vì:
+- Bài toán sẽ làm việc với một số lượng lớn hình ảnh
+- Thuật toán xử lý và lưu trữ dữ liệu hình ảnh
+- Sử dụng các phương pháp feature extraction và xử lý quá trình extraction
+
+Với sự trợ giúp của song song, quá trình nặng nhọc này có thể được chia thành nhiều tác vụ nhỏ hơn và thực hiện chúng cùng một lúc. Điều này giúp chương trình chạy nhanh hơn, mượt mà hơn và sử dụng tài nguyên hiệu quả hơn rất nhiều. Do đó, việc thực hiện song song trong tìm kiếm hình ảnh có thể giảm đáng kể thời gian truy xuất và cải thiện hiệu suất của hệ thống truy xuất vốn rất quan trọng trong 
 
 ### TÀI LIỆU THAM KHẢO
 Để hoàn thành đồ án này, nhóm mình đã tham khảo những tài liệu sau:
