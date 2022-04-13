@@ -49,5 +49,5 @@ Với sự trợ giúp của song song, quá trình nặng nhọc này có thể
 
 ### TÀI LIỆU THAM KHẢO
 Để hoàn thành đồ án này, nhóm mình đã tham khảo những tài liệu sau:
-
+1. https://github.com/Defcon27/Image-Search-using-Parallel-Computing
 Và nhóm xin gửi lời cảm ơn đặc biệt đến https://stackoverflow.com/ vì đã hỗ trợ nhóm trong quá trình làm đồ án này. :">
