@@ -20,7 +20,8 @@
 
 ### **1.1 MÔ TẢ TỔNG QUAN**
 **Tên đề tài:** 
-Image-Search-using-Parallel-Computing
+Image-Search-using-Parallel-Computing 
+
 *(Công cụ Tìm kiếm Hình ảnh bằng kỹ thuật truy vấn truy xuất hình ảnh dựa trên nội dung liên quan )*
 
 Với sự phát triển mạnh mẽ của internet, mọi người có thể tiếp cận với một lượng lớn thông tin. Do đó, việc truy xuất thông tin quan tâm trở nên rất khó khăn.
