@@ -18,7 +18,7 @@ def extractFeatureVectors(image_path):
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image = cv2.resize(image, (500, 500))
     featureVectors = FeatureVectors(image)
-    vectors = featureVectors.getFeatureVector(True)
+    vectors = featureVectors.getFeatureVector('cuda_host')
 
     imageName = image_path.split("/")[-1]
     return [imageName, vectors]
@@ -52,7 +52,6 @@ def chi2_distance_kernel( queryVector, vector, feaureMatrix, cosine_similarity):
 
 def ParallelImageSearch(queryImage):
     # Performs Image Search using Query image
-    use_device = True
     db_image_path = "Image_Database/"
     db_imageName_list = []
     db_features = []
@@ -72,7 +71,7 @@ def ParallelImageSearch(queryImage):
     # imageName, queryVector = extractFeatureVectors(queryImage_path)
 
     # Feature extraction testset
-    ts_image_path = "Image_Testset/"
+    ts_image_path = queryImage
     ts_imageName_list = []
     ts_features = []
 

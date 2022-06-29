@@ -33,9 +33,9 @@ class FeatureVectors():
         self.filter = NoiseReduction(image)
         self.image = self.filter.applyGaussianBlur()
 
-    def __getMeanIntensity(self, use_device=False):
+    def __getMeanIntensity(self, use_device):
         # Returns the mean intensity of image
-        if use_device==False:
+        if use_device=='host':
             meanIntensity = []
             for channel in range(3):
                 channel_mean = np.average(self.image[:, :, channel])
@@ -47,11 +47,11 @@ class FeatureVectors():
 
         return meanIntensity
 
-    def __getStdIntensity(self, use_device=False):
+    def __getStdIntensity(self, use_device):
         # Returns the standard deviation of intensity of image
         stdIntensity = []
 
-        if use_device==False:
+        if use_device=='host':
             stdIntensity = []
             for channel in range(3):
                 channel_std = np.std(self.image[:, :, channel])
@@ -60,6 +60,7 @@ class FeatureVectors():
             image=self.image
             image_flatten = image.reshape(image.shape[0]*image.shape[1], image.shape[2])
             stdIntensity = list(np_std(image_flatten, 0))
+
         return stdIntensity
 
     def __getRGBHistogramVector(self):
@@ -72,36 +73,26 @@ class FeatureVectors():
 
         return RGBHistogram
 
-    def __getHuMoments(self, use_device = False):
+    def __getHuMoments(self, use_device):
         # Returns Hu-Moments vector of image
         laplacian_filter = ConvolutionFilter(self.image)
-
-        if use_device == False:
-            laplacian_filtered = laplacian_filter.applyLaplacian()
-        else:
-            laplacian_filtered = laplacian_filter.applyLaplacian(True)
+        laplacian_filtered = laplacian_filter.applyLaplacian(use_device)
 
         canny_huMoments = cv2.HuMoments(cv2.moments(laplacian_filtered)).flatten()
         huVector = list(canny_huMoments.ravel())
         return huVector
 
-    def getFeatureVector(self, use_device=False):
+    def getFeatureVector(self, use_device):
         """ Return a python list of complete feature vectors
         Extracts Statistics, 3-D Histogram, HuMoments from image and appends into single list
         """
         featureVectors = []
-        if use_device == False:
-            
-            meanIntensity = self.__getMeanIntensity()
-            stdIntensity = self.__getStdIntensity()
-            rgbHistogram = self.__getRGBHistogramVector()
-            huVectors = self.__getHuMoments()
-        else:
-            meanIntensity = self.__getMeanIntensity(True)
-            stdIntensity = self.__getStdIntensity(True)
-            rgbHistogram = self.__getRGBHistogramVector()
-            huVectors = self.__getHuMoments(True)
+        meanIntensity = self.__getMeanIntensity(use_device)
+        stdIntensity = self.__getStdIntensity(use_device)
+        rgbHistogram = self.__getRGBHistogramVector()
+        huVectors = self.__getHuMoments(use_device)
 
+            
         colorVectors = meanIntensity+stdIntensity+rgbHistogram
         featureVectors = colorVectors+huVectors
 

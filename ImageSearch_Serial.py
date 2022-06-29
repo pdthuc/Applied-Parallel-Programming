@@ -14,7 +14,7 @@ def extractFeatureVectors(image_path):
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image = cv2.resize(image, (500, 500))
     featureVectors = FeatureVectors(image)
-    vectors = featureVectors.getFeatureVector(False)
+    vectors = featureVectors.getFeatureVector('host')
 
     imageName = image_path.split("/")[-1]
     return [imageName, vectors]
@@ -32,6 +32,7 @@ def chi2_distance(queryVector, vector, feaureMatrix, cosine_similarity):
       cosine_similarity[row, ] = temp * 0.5
 
 def ImageSearch(queryImage):
+    db_image_path = "Image_Database/"
     db_imageName_list = []
     db_features = []
 
