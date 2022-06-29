@@ -47,6 +47,9 @@ Truy xuất hình ảnh dựa trên nội dung tìm kiếm các phương pháp �
 - Sử dụng các phương pháp feature extraction và xử lý quá trình extraction
 
 Với sự trợ giúp của song song, quá trình nặng nhọc này có thể được chia thành nhiều tác vụ nhỏ hơn và thực hiện chúng cùng một lúc. Điều này giúp chương trình chạy nhanh hơn, mượt mà hơn và sử dụng tài nguyên hiệu quả hơn rất nhiều. Do đó, việc thực hiện song song trong tìm kiếm hình ảnh có thể giảm đáng kể thời gian truy xuất và cải thiện hiệu suất của hệ thống truy xuất vốn rất quan trọng trong 
+### **DATASET AND TESTSET**
+- Dataset: https://drive.google.com/drive/folders/1OaWgsG-fE1R1WXFYpacy4qw1pt1Wu8vp?usp=sharing
+- Testset: https://drive.google.com/drive/folders/1cdvMdBxRekLXCyvUoTMC5RdHMBpTkG9a?usp=sharing
 
 ### TÀI LIỆU THAM KHẢO
 Để hoàn thành đồ án này, nhóm mình đã tham khảo những tài liệu sau:
